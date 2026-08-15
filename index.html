@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<meta name="theme-color" content="#0d9488" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+<meta name="description" content="柯婷菲 - 个人自传">
+<title>柯婷菲 | 个人自传</title>
+<style>
+/* ========== CSS Variables ========== */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --primary: #0d9488; --primary-light: #14b8a6; --primary-dark: #0f766e;
+  --primary-soft: #ccfbf1; --primary-glow: rgba(13,148,136,0.25);
+  --accent: #d97706; --accent-light: #f59e0b; --accent-soft: #fef3c7;
+  --tertiary: #7c3aed; --tertiary-soft: #ede9fe;
+  --rose: #e11d48; --rose-soft: #ffe4e6;
+  --bg: #f8fafc; --bg-card: #ffffff;
+  --bg-nav: rgba(255,255,255,0.85);
+  --text: #1e293b; --text-secondary: #64748b; --text-muted: #94a3b8;
+  --border: #e2e8f0; --border-light: #f1f5f9;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow: 0 1px 3px rgba(0,0,0,0.08),0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.06),0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.08),0 4px 10px rgba(0,0,0,0.04);
+  --shadow-xl: 0 20px 40px rgba(0,0,0,0.1);
+  --radius-sm: 6px; --radius: 10px; --radius-lg: 16px; --radius-xl: 24px;
+  --hero-gradient: linear-gradient(135deg,#f0fdfa 0%,#f8fafc 35%,#fffbeb 65%,#fdf2f8 100%);
+}
+[data-theme="dark"] {
+  --primary: #2dd4bf; --primary-light: #5eead4; --primary-dark: #14b8a6;
+  --primary-soft: #134e4a; --primary-glow: rgba(45,212,191,0.2);
+  --accent: #fbbf24; --accent-light: #fcd34d; --accent-soft: #422006;
+  --tertiary: #a78bfa; --tertiary-soft: #1e1b4b;
+  --rose: #fb7185; --rose-soft: #2d1220;
+  --bg: #0f172a; --bg-card: #1e293b;
+  --bg-nav: rgba(15,23,42,0.88);
+  --text: #e2e8f0; --text-secondary: #94a3b8; --text-muted: #64748b;
+  --border: #334155; --border-light: #1e293b;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow: 0 1px 3px rgba(0,0,0,0.4),0 1px 2px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.4),0 2px 4px rgba(0,0,0,0.2);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.4),0 4px 10px rgba(0,0,0,0.2);
+  --shadow-xl: 0 20px 40px rgba(0,0,0,0.5);
+  --hero-gradient: linear-gradient(135deg,#0f172a 0%,#0f1a1f 35%,#1a1208 65%,#1a1020 100%);
+}
+/* ========== Reset & Base ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px;font-size:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-family:var(--font-sans);background:var(--bg);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transition:background-color .3s,color .3s;overflow-x:hidden;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+a{color:var(--primary);text-decoration:none;transition:color .2s}
+a:hover{color:var(--primary-light)}
+img{max-width:100%;height:auto;content-visibility:auto}
+::selection{background:var(--primary-soft);color:var(--primary)}
+.container{max-width:1000px;margin:0 auto;padding:0 24px}
+section{padding:64px 0}
+.section-label{display:inline-block;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:8px;background:var(--primary-soft);padding:4px 12px;border-radius:20px}
+.section-title{font-size:1.75rem;font-weight:800;margin-bottom:40px;letter-spacing:.02em}
+/* ========== Navbar ========== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg-nav);backdrop-filter:blur(12px) saturate(180%);-webkit-backdrop-filter:blur(12px) saturate(180%);border-bottom:1px solid var(--border);transition:background .3s,border-color .3s,box-shadow .3s}
+.navbar.scrolled{box-shadow:var(--shadow-md)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.nav-brand{font-size:1.1rem;font-weight:700;color:var(--text);white-space:nowrap;background:linear-gradient(135deg,var(--primary),var(--primary-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;flex-wrap:wrap}
+.nav-links a{display:flex;align-items:center;min-height:44px;padding:6px 12px;font-size:.82rem;font-weight:500;color:var(--text-secondary);border-radius:var(--radius-sm);transition:all .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);background:var(--primary-soft)}
+.nav-actions{display:flex;gap:6px;align-items:center}
+.nav-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg-card);color:var(--text-secondary);cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all .2s;min-width:36px;min-height:36px}
+.nav-btn:hover{color:var(--primary);border-color:var(--primary);background:var(--primary-soft)}
+/* ========== Hero ========== */
+.hero{background:var(--hero-gradient);padding:100px 0 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 30% 20%,var(--primary-soft) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,var(--accent-soft) 0%,transparent 50%),radial-gradient(ellipse at 50% 50%,var(--tertiary-soft) 0%,transparent 40%);opacity:.6;pointer-events:none}
+.hero-inner{position:relative;z-index:1}
+/* Avatar ring */
+.avatar-ring{position:relative;width:260px;height:260px;margin:0 auto 32px}
+.avatar-ring-bg{position:absolute;inset:10px;border-radius:50%;border:2px dashed var(--primary-soft);animation:spinSlow 30s linear infinite}
+.hero-avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);cursor:pointer;box-shadow:0 8px 32px var(--primary-glow),0 0 0 6px var(--bg-card);transition:transform .25s,box-shadow .25s;z-index:2}
+.hero-avatar:hover{transform:translate(-50%,-50%) scale(1.08);box-shadow:0 12px 40px var(--primary-glow),0 0 0 8px var(--primary-soft)}
+.ring-btn{position:absolute;width:auto;min-width:90px;padding:8px 16px;border-radius:20px;border:1.5px solid var(--border);background:var(--bg-card);color:var(--text);font-size:.78rem;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;box-shadow:var(--shadow);font-family:inherit;z-index:1}
+.ring-btn:hover,.ring-btn.active{background:var(--primary);color:#fff;border-color:var(--primary);box-shadow:0 4px 16px var(--primary-glow);transform:scale(1.05)}
+.ring-btn-top{top:0;left:50%;transform:translateX(-50%)}
+.ring-btn-right{right:-10px;top:50%;transform:translateY(-50%)}
+.ring-btn-bottom{bottom:0;left:50%;transform:translateX(-50%)}
+.ring-btn-left{left:-10px;top:50%;transform:translateY(-50%)}
+.ring-btn:hover{transform:scale(1.05)}
+.ring-btn-top:hover,.ring-btn-bottom:hover{transform:translateX(-50%) scale(1.05)}
+.ring-btn-left:hover,.ring-btn-right:hover{transform:translateY(-50%) scale(1.05)}
+@keyframes spinSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.hero-name{font-size:2.5rem;font-weight:800;letter-spacing:.04em;margin-bottom:8px;background:linear-gradient(135deg,var(--text),var(--primary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-subtitle{font-size:1rem;color:var(--text-secondary);max-width:600px;margin:0 auto 24px;line-height:1.7}
+.hero-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:28px}
+.badge{display:inline-flex;align-items:center;gap:4px;padding:5px 14px;border-radius:20px;font-size:.8rem;font-weight:600;letter-spacing:.02em}
+.badge-primary{background:var(--primary-soft);color:var(--primary)}
+.badge-accent{background:var(--accent-soft);color:var(--accent)}
+.badge-tertiary{background:var(--tertiary-soft);color:var(--tertiary)}
+.badge-rose{background:var(--rose-soft);color:var(--rose)}
+.hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+/* ========== Buttons ========== */
+.btn{display:inline-flex;align-items:center;gap:.4em;padding:10px 22px;min-height:44px;font-size:.9rem;font-weight:600;border:none;border-radius:var(--radius);cursor:pointer;transition:all .2s;font-family:inherit;letter-spacing:.02em}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 2px 8px var(--primary-glow)}
+.btn-primary:hover{background:var(--primary-light);transform:translateY(-1px);box-shadow:0 4px 16px var(--primary-glow)}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border)}
+.btn-outline:hover{background:var(--bg);border-color:var(--primary);color:var(--primary)}
+/* ========== Bio Panels ========== */
+.bio-panels{display:grid;grid-template-columns:1fr;gap:24px;margin-top:40px}
+.bio-panel{background:var(--bg-card);border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .25s;display:none;animation:fadeIn .4s ease-out}
+.bio-panel.show{display:block}
+.bio-panel-icon{font-size:2rem;margin-bottom:12px}
+.bio-panel-title{font-size:1.25rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px;color:var(--primary)}
+.bio-panel p{color:var(--text-secondary);line-height:1.9;margin-bottom:12px;font-size:.95rem;text-indent:2em}
+.bio-panel p:last-child{margin-bottom:0}
+/* ========== Highlights ========== */
+.highlights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.highlight-card{background:var(--bg-card);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .25s}
+.highlight-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.highlight-icon{font-size:2rem;margin-bottom:8px}
+.highlight-num{font-size:2.2rem;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--tertiary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.highlight-label{font-size:.85rem;color:var(--text-secondary);margin-top:4px}
+/* ========== Timeline ========== */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:var(--border);border-radius:1px}
+.timeline-item{position:relative;margin-bottom:32px;padding-left:16px}
+.timeline-item:last-child{margin-bottom:0}
+.timeline-dot{position:absolute;left:-24px;top:4px;width:18px;height:18px;border-radius:50%;background:var(--primary);border:3px solid var(--bg);box-shadow:0 0 0 3px var(--primary-soft)}
+.timeline-year{font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:4px}
+.timeline-title{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.timeline-desc{font-size:.9rem;color:var(--text-secondary);line-height:1.8}
+/* ========== Skills ========== */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.skill-cat{background:var(--bg-card);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow);border:1px solid var(--border);transition:all .25s}
+.skill-cat:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.skill-cat-title{font-size:.95rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px;color:var(--primary)}
+.skill-item{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:12px}
+.skill-item:last-child{margin-bottom:0}
+.skill-name{font-size:.85rem;font-weight:500;white-space:nowrap}
+.skill-bar{flex:1;height:6px;background:var(--border-light);border-radius:3px;overflow:hidden}
+.skill-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--primary),var(--primary-light));transition:width .8s ease-out}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.skill-tag{padding:4px 12px;border-radius:14px;font-size:.78rem;font-weight:500;background:var(--primary-soft);color:var(--primary)}
+/* ========== Certificates ========== */
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.cert-card{display:flex;align-items:flex-start;gap:12px;background:var(--bg-card);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow-sm);border:1px solid var(--border);transition:all .2s}
+.cert-card:hover{box-shadow:var(--shadow);border-color:var(--primary-soft)}
+.cert-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+.cert-name{font-size:.88rem;font-weight:600;margin-bottom:2px}
+.cert-year{font-size:.78rem;color:var(--text-muted)}
+/* ========== Footer ========== */
+.footer{text-align:center;padding:32px 0;border-top:1px solid var(--border);color:var(--text-muted);font-size:.82rem}
+/* ========== Scroll Top ========== */
+.scroll-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;border:none;cursor:pointer;font-size:1.2rem;box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transition:all .3s;z-index:999;display:flex;align-items:center;justify-content:center}
+.scroll-top.visible{opacity:1;pointer-events:auto}
+.scroll-top:hover{background:var(--primary-light);transform:translateY(-2px)}
+/* ========== Toast ========== */
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--bg);padding:10px 24px;border-radius:20px;font-size:.85rem;font-weight:500;opacity:0;pointer-events:none;transition:all .3s;z-index:9999;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* ========== Lightbox ========== */
+.lightbox{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox-img{max-width:85vw;max-height:85vh;border-radius:var(--radius-lg);box-shadow:0 20px 60px rgba(0,0,0,.5);transform:scale(.9);transition:transform .3s;object-fit:contain}
+.lightbox.open .lightbox-img{transform:scale(1)}
+.lightbox-close{position:absolute;top:20px;right:28px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.lightbox-close:hover{background:rgba(255,255,255,.3)}
+/* ========== Animations ========== */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.animate-in{animation:fadeInUp .5s ease-out both}
+/* ========== Responsive ========== */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hero{padding:90px 0 50px}
+  .hero-name{font-size:1.8rem}
+  .hero-subtitle{font-size:.9rem}
+  .avatar-ring{width:200px;height:200px}
+  .hero-avatar{width:100px;height:100px}
+  .ring-btn{font-size:.7rem;min-width:70px;padding:6px 12px}
+  .ring-btn-right{right:-20px}.ring-btn-left{left:-20px}
+  .section-title{font-size:1.4rem}
+  .highlights-grid{grid-template-columns:repeat(2,1fr)}
+  .bio-panel{padding:24px}
+  .bio-panel p{font-size:.88rem}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .hero{padding:80px 0 40px}
+  .hero-name{font-size:1.5rem}
+  .avatar-ring{width:160px;height:160px}
+  .hero-avatar{width:80px;height:80px}
+  .ring-btn{font-size:.65rem;min-width:60px;padding:5px 10px;border-radius:16px}
+  .ring-btn-right{right:-28px}.ring-btn-left{left:-28px}
+  .hero-cta{flex-direction:column;align-items:center}
+  .highlights-grid{grid-template-columns:1fr}
+  .certs-grid{grid-template-columns:1fr}
+}
+/* ========== Reduced Motion ========== */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}
+/* ========== Gallery & Album ========== */
+.gallery-wrap{text-align:center}
+.gallery-open-btn{margin-bottom:24px;font-size:1rem;padding:14px 32px;min-height:52px}
+.gallery-preview{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.gallery-preview img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius);cursor:pointer;transition:transform .25s,box-shadow .25s;box-shadow:var(--shadow-sm);border:1px solid var(--border)}
+.gallery-preview img:hover{transform:scale(1.03);box-shadow:var(--shadow-md)}
+/* 相册全屏覆盖层 - 沉浸式 */
+.album-overlay{position:fixed;inset:0;z-index:9998;background:rgba(15,23,42,.97);opacity:0;pointer-events:none;transition:opacity .35s ease;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}
+.album-overlay.open{opacity:1;pointer-events:auto}
+.album-close{position:absolute;top:24px;right:32px;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:1.6rem;border:none;cursor:pointer;z-index:10;transition:all .25s;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.album-close:hover{background:rgba(255,255,255,.3);transform:rotate(90deg)}
+/* 主图舞台 */
+.album-stage{position:relative;flex:1 1 auto;display:flex;align-items:center;justify-content:center;width:100%;max-width:100vw}
+.album-main-img{max-width:85vw;max-height:78vh;border-radius:var(--radius-lg);box-shadow:0 20px 60px rgba(0,0,0,.5);object-fit:contain;transition:opacity .35s ease,transform .35s ease}
+.album-counter{position:absolute;top:16px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.5);color:#fff;padding:6px 16px;border-radius:20px;font-size:.85rem;font-weight:600;backdrop-filter:blur(4px)}
+/* 侧边箭头 */
+.album-arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:1.4rem;cursor:pointer;z-index:5;transition:all .25s;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.album-arrow:hover{background:var(--primary);border-color:var(--primary-light);transform:translateY(-50%) scale(1.08)}
+.album-arrow:disabled{opacity:.3;cursor:not-allowed}
+.album-arrow:hover:disabled{background:rgba(255,255,255,.12);transform:translateY(-50%)}
+.album-arrow-prev{left:24px}
+.album-arrow-next{right:24px}
+/* 底部缩略图条 */
+.album-thumbs{display:flex;gap:10px;margin-top:20px;overflow-x:auto;max-width:90vw;padding:8px 4px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.2) transparent}
+.album-thumbs::-webkit-scrollbar{height:6px}
+.album-thumbs::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:3px}
+.album-thumb{width:64px;height:64px;object-fit:cover;border-radius:8px;cursor:pointer;flex-shrink:0;border:2px solid transparent;opacity:.6;transition:all .25s}
+.album-thumb:hover{opacity:.9;transform:scale(1.05)}
+.album-thumb.active{border-color:var(--primary-light);opacity:1;transform:scale(1.08)}
+@media(max-width:768px){
+  .gallery-preview{grid-template-columns:repeat(3,1fr)}
+  .album-close{top:16px;right:16px;width:42px;height:42px}
+  .album-main-img{max-width:92vw;max-height:65vh}
+  .album-arrow{width:42px;height:42px;font-size:1.1rem}
+  .album-arrow-prev{left:8px}.album-arrow-next{right:8px}
+  .album-thumb{width:48px;height:48px}
+  .album-counter{font-size:.78rem;padding:4px 12px}
+}
+@media(max-width:480px){
+  .gallery-preview{grid-template-columns:repeat(2,1fr)}
+  .album-main-img{max-width:95vw;max-height:60vh}
+  .album-arrow{width:38px;height:38px;font-size:1rem}
+  .album-thumb{width:42px;height:42px}
+}
+/* ========== Bio Cards (联系方式下方) ========== */
+.bio-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.bio-card{position:relative;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);cursor:pointer;overflow:hidden;transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s,border-color .4s;box-shadow:var(--shadow);height:340px;display:flex;flex-direction:column}
+.bio-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--primary),var(--accent),var(--tertiary));transform:scaleX(0);transform-origin:left;transition:transform .45s ease;z-index:5}
+.bio-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl);border-color:var(--primary-light)}
+.bio-card:hover::before{transform:scaleX(1)}
+/* 封面图 - qarhan-lake */
+.bio-card-cover{position:relative;height:55%;overflow:hidden}
+.bio-card-cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.bio-card:hover .bio-card-cover-img{transform:scale(1.08)}
+/* 波光粼粼动画层 */
+.bio-card-shimmer{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.35) 48%,rgba(255,255,255,.55) 50%,rgba(255,255,255,.35) 52%,transparent 70%);background-size:250% 100%;animation:shimmer 4s ease-in-out infinite;mix-blend-mode:overlay}
+.bio-card:hover .bio-card-shimmer{animation:shimmer 1.8s ease-in-out infinite}
+@keyframes shimmer{0%{background-position:120% 0}50%{background-position:-20% 0}100%{background-position:120% 0}}
+/* 水波纹层 - 微小海浪 */
+.bio-card-waves{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 20% 60%,rgba(13,148,136,.18) 0%,transparent 40%),radial-gradient(ellipse at 70% 40%,rgba(20,184,166,.18) 0%,transparent 35%),radial-gradient(ellipse at 50% 80%,rgba(125,211,252,.15) 0%,transparent 40%);animation:waveGlow 6s ease-in-out infinite alternate}
+@keyframes waveGlow{0%{transform:translateX(-6px) translateY(2px);opacity:.8}50%{opacity:1}100%{transform:translateX(6px) translateY(-2px);opacity:.85}}
+/* 编号在封面右上 */
+.bio-card-num{position:absolute;top:14px;right:18px;font-size:2.6rem;font-weight:800;color:rgba(255,255,255,.85);line-height:1;z-index:3;text-shadow:0 2px 12px rgba(0,0,0,.4);transition:transform .35s}
+.bio-card:hover .bio-card-num{transform:scale(1.1)}
+.bio-card-cover-label{position:absolute;bottom:14px;left:18px;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.1em;z-index:3;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+/* 内容区 */
+.bio-card-body{flex:1;padding:14px 18px;display:flex;flex-direction:column;justify-content:space-between}
+.bio-card-title{font-size:1.15rem;font-weight:800;color:var(--text);margin:0 0 4px;line-height:1.3}
+.bio-card-sub{font-size:.8rem;color:var(--text-secondary);line-height:1.5;margin-bottom:8px}
+.bio-card-btn{display:inline-flex;align-items:center;gap:6px;color:var(--primary);font-weight:700;font-size:.82rem;transition:gap .25s}
+.bio-card:hover .bio-card-btn{gap:10px}
+.bio-card-arrow{transition:transform .25s}
+.bio-card:hover .bio-card-arrow{transform:translateX(4px)}
+@media(max-width:1100px){.bio-cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){
+  .bio-cards{grid-template-columns:1fr;gap:14px;margin-top:30px}
+  .bio-card{height:300px}
+  .bio-card-num{font-size:2.2rem}
+  .bio-card-title{font-size:1.05rem}
+}
+/* 自传内容弹窗 - 美化版 */
+.bio-modal{position:fixed;inset:0;z-index:9997;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .3s;display:flex;align-items:center;justify-content:center;padding:20px}
+.bio-modal.open{opacity:1;pointer-events:auto}
+.bio-modal-inner{background:linear-gradient(135deg,#fff 0%,#f0fdfa 50%,#fffbeb 100%);border-radius:var(--radius-xl);max-width:720px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 30px 80px rgba(0,0,0,.3);transform:scale(.9) translateY(20px);transition:transform .35s cubic-bezier(.34,1.56,.64,1);position:relative}
+.bio-modal.open .bio-modal-inner{transform:scale(1) translateY(0)}
+.bio-modal-close{position:absolute;top:20px;right:20px;width:44px;height:44px;border-radius:50%;background:rgba(13,148,136,.1);color:var(--primary-dark);font-size:1.4rem;border:none;cursor:pointer;z-index:5;transition:all .25s;display:flex;align-items:center;justify-content:center}
+.bio-modal-close:hover{background:var(--primary);color:#fff;transform:rotate(90deg)}
+.bio-modal-header{padding:40px 40px 24px;text-align:center;border-bottom:1px solid var(--border-light)}
+.bio-modal-icon{font-size:3rem;margin-bottom:12px;display:inline-block;animation:bounceIn .5s ease-out}
+.bio-modal-title{font-size:1.8rem;font-weight:800;color:var(--text);margin:0}
+.bio-modal-sub{color:var(--text-secondary);font-size:.9rem;margin-top:6px}
+.bio-modal-body{padding:32px 40px 40px}
+.bio-modal-body p{font-size:1rem;line-height:1.85;color:var(--text);margin:0 0 18px;padding:14px 18px;background:rgba(255,255,255,.6);border-left:3px solid var(--primary-light);border-radius:0 var(--radius) var(--radius) 0;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+.bio-modal-body p:last-child{margin-bottom:0}
+.bio-modal-body p strong{color:var(--primary-dark);font-weight:700}
+@media(max-width:768px){
+  .bio-modal-inner{max-height:92vh;border-radius:20px}
+  .bio-modal-header{padding:28px 24px 18px}
+  .bio-modal-body{padding:24px}
+  .bio-modal-body p{font-size:.92rem;padding:12px 14px}
+  .bio-modal-title{font-size:1.4rem}
+  .bio-modal-close{top:14px;right:14px;width:38px;height:38px}
+}
+@keyframes bounceIn{0%{transform:scale(0) rotate(-30deg);opacity:0}60%{transform:scale(1.2) rotate(10deg);opacity:1}100%{transform:scale(1) rotate(0)}}
+/* ========== Print ========== */
+@media print{
+  .navbar,.scroll-top,.lightbox,.toast,.nav-btn,.ring-btn,.album-overlay,.gallery-open-btn{display:none!important}
+  .hero{padding:20px 0;background:none!important}
+  .hero::before{display:none}
+  .bio-panel{display:block!important;break-inside:avoid;box-shadow:none;border:1px solid #ddd}
+  .highlight-card,.skill-cat,.cert-card{break-inside:avoid;box-shadow:none;border:1px solid #ddd}
+  body{font-size:12pt;color:#000;background:#fff}
+  .section-title{font-size:16pt}
+  .hero-name{font-size:20pt}
+  @page{margin:2cm}
+}
+</style>
+</head>
+<body>
+<nav class="navbar" id="navbar" role="navigation" aria-label="主导航">
+  <div class="nav-inner">
+    <span class="nav-brand">柯婷菲</span>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" data-i18n-key="nav_home">首页</a></li>
+      <li><a href="#highlights" data-i18n-key="nav_highlights">亮点</a></li>
+      <li><a href="#education" data-i18n-key="nav_education">教育</a></li>
+      <li><a href="#skills" data-i18n-key="nav_skills">技能</a></li>
+      <li><a href="#gallery" data-i18n-key="nav_gallery">相册</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-btn" id="btnLang" title="切换语言" aria-label="切换语言">🌐</button>
+      <button class="nav-btn" id="btnTheme" title="切换主题" aria-label="切换深浅色模式">🌓</button>
+      <button class="nav-btn" id="btnPrint" title="打印" aria-label="打印页面" onclick="window.print()">🖨</button>
+    </div>
+  </div>
+</nav>
+<main>
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="avatar-ring">
+        <div class="avatar-ring-bg" aria-hidden="true"></div>
+        <img class="hero-avatar" src="avatar.jpg" alt="柯婷菲" loading="lazy" width="140" height="140">
+      </div>
+      <h1 class="hero-name">柯婷菲</h1>
+      <p class="hero-subtitle" data-i18n-key="hero_intro">
+        华中科技大学2026级本科生。生于东莞，长于开明之家。热爱数理与表达，享受逻辑推演与舞台表达的双重乐趣。ESTJ型人格，靠谱务实，正在成为"Π"型人才的道路上稳步前行。
+      </p>
+      <div class="hero-badges" id="heroBadges"></div>
+      <div class="hero-cta">
+        <button class="btn btn-primary" id="btnEmail" data-i18n-key="contact_me">📧 联系我</button>
+        <button class="btn btn-outline" id="btnPhone" data-copy="13332684276">📞 13332684276</button>
+        <button class="btn btn-outline" id="btnWechat" data-copy="Sage05214276">💬 微信：Sage05214276</button>
+      </div>
+      <div class="bio-cards" id="bioCards">
+        <div class="bio-card" data-panel="family">
+          <div class="bio-card-cover">
+            <img class="bio-card-cover-img" src="photo/qarhan-lake.jpg" alt="家庭情况封面" loading="lazy">
+            <div class="bio-card-waves"></div>
+            <div class="bio-card-shimmer"></div>
+            <div class="bio-card-num">01</div>
+            <div class="bio-card-cover-label">FAMILY BACKGROUND</div>
+          </div>
+          <div class="bio-card-body">
+            <div>
+              <h3 class="bio-card-title">家庭情况</h3>
+              <p class="bio-card-sub">生于东莞，开明之家，父母培养独立</p>
+            </div>
+            <span class="bio-card-btn">查看家庭故事 <span class="bio-card-arrow">→</span></span>
+          </div>
+        </div>
+        <div class="bio-card" data-panel="life">
+          <div class="bio-card-cover">
+            <img class="bio-card-cover-img" src="photo/qarhan-lake.jpg" alt="生平与教育封面" loading="lazy">
+            <div class="bio-card-waves"></div>
+            <div class="bio-card-shimmer"></div>
+            <div class="bio-card-num">02</div>
+            <div class="bio-card-cover-label">GROWTH & EDUCATION</div>
+          </div>
+          <div class="bio-card-body">
+            <div>
+              <h3 class="bio-card-title">生平与教育</h3>
+              <p class="bio-card-sub">省一等奖，六年学习委员，求佳奖学金</p>
+            </div>
+            <span class="bio-card-btn">查看成长经历 <span class="bio-card-arrow">→</span></span>
+          </div>
+        </div>
+        <div class="bio-card" data-panel="personality">
+          <div class="bio-card-cover">
+            <img class="bio-card-cover-img" src="photo/qarhan-lake.jpg" alt="性格特征封面" loading="lazy">
+            <div class="bio-card-waves"></div>
+            <div class="bio-card-shimmer"></div>
+            <div class="bio-card-num">03</div>
+            <div class="bio-card-cover-label">PERSONALITY</div>
+          </div>
+          <div class="bio-card-body">
+            <div>
+              <h3 class="bio-card-title">性格特征</h3>
+              <p class="bio-card-sub">ESTJ总经理型，拉丁舞八年，钢琴五级</p>
+            </div>
+            <span class="bio-card-btn">查看性格特征 <span class="bio-card-arrow">→</span></span>
+          </div>
+        </div>
+        <div class="bio-card" data-panel="future">
+          <div class="bio-card-cover">
+            <img class="bio-card-cover-img" src="photo/qarhan-lake.jpg" alt="大学期待封面" loading="lazy">
+            <div class="bio-card-waves"></div>
+            <div class="bio-card-shimmer"></div>
+            <div class="bio-card-num">04</div>
+            <div class="bio-card-cover-label">UNIVERSITY VISION</div>
+          </div>
+          <div class="bio-card-body">
+            <div>
+              <h3 class="bio-card-title">大学期待</h3>
+              <p class="bio-card-sub">数理热情，创业协会，成为Π型人才</p>
+            </div>
+            <span class="bio-card-btn">查看大学期待 <span class="bio-card-arrow">→</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="bioPanels">
+    <div class="container">
+      <div class="bio-panels" id="bioPanelsContainer"></div>
+    </div>
+  </section>
+  <section id="highlights">
+    <div class="container">
+      <span class="section-label" data-i18n-key="highlights_label">亮点成果</span>
+      <h2 class="section-title" data-i18n-key="highlights_title">成长亮点</h2>
+      <div class="highlights-grid" id="highlightsGrid"></div>
+    </div>
+  </section>
+  <section id="education">
+    <div class="container">
+      <span class="section-label" data-i18n-key="education_label">教育背景</span>
+      <h2 class="section-title" data-i18n-key="education_title">求学之路</h2>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+  <section id="skills">
+    <div class="container">
+      <span class="section-label" data-i18n-key="skills_label">技能</span>
+      <h2 class="section-title" data-i18n-key="skills_title">能力画像</h2>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </div>
+  </section>
+  <section id="certs">
+    <div class="container">
+      <span class="section-label" data-i18n-key="certs_label">证书与荣誉</span>
+      <h2 class="section-title" data-i18n-key="certs_title">获奖与证书</h2>
+      <div class="certs-grid" id="certsGrid"></div>
+    </div>
+  </section>
+  <section id="gallery">
+    <div class="container">
+      <span class="section-label" data-i18n-key="gallery_label">生活相册</span>
+      <h2 class="section-title" data-i18n-key="gallery_title">生活点滴</h2>
+      <div class="gallery-wrap">
+        <button class="btn btn-primary gallery-open-btn" id="galleryOpenBtn">📷 <span data-i18n-key="gallery_btn">点击查看生活照相册</span></button>
+        <div class="gallery-preview" id="galleryPreview"></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>&copy; <span id="footerYear"></span> 柯婷菲 · <span data-i18n-key="updated">更新于</span> 2026年8月</p>
+  </div>
+</footer>
+<button class="scroll-top" id="scrollTop" aria-label="返回顶部" title="返回顶部">↑</button>
+<div class="toast" id="toast" aria-live="polite"></div>
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="照片放大">
+  <button class="lightbox-close" id="lightboxClose" aria-label="关闭">&times;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="柯婷菲">
+</div>
+<div class="bio-modal" id="bioModal" aria-hidden="true" role="dialog" aria-label="自传详情">
+  <div class="bio-modal-inner">
+    <button class="bio-modal-close" id="bioModalClose" aria-label="关闭">&times;</button>
+    <div class="bio-modal-header">
+      <div class="bio-modal-icon" id="bioModalIcon"></div>
+      <h2 class="bio-modal-title" id="bioModalTitle"></h2>
+      <p class="bio-modal-sub" id="bioModalSub"></p>
+    </div>
+    <div class="bio-modal-body" id="bioModalBody"></div>
+  </div>
+</div>
+<div class="album-overlay" id="albumOverlay" aria-hidden="true" role="dialog" aria-label="生活照相册">
+  <button class="album-close" id="albumClose" aria-label="关闭相册">&times;</button>
+  <button class="album-arrow album-arrow-prev" id="albumArrowPrev" aria-label="上一张">&#10094;</button>
+  <button class="album-arrow album-arrow-next" id="albumArrowNext" aria-label="下一张">&#10095;</button>
+  <div class="album-stage">
+    <div class="album-counter" id="albumCounter"></div>
+    <img class="album-main-img" id="albumMainImg" src="" alt="生活照">
+  </div>
+  <div class="album-thumbs" id="albumThumbs"></div>
+</div>
+<script>
+const resume = {
+  name: '柯婷菲',
+  phone: '13332684276',
+  wechat: 'Sage05214276',
+  email_user: '3499048155',
+  email_domain: 'qq.com',
+  hero_badges: [
+    { zh: '华中科技大学', en: 'HUST', color: 'primary' },
+    { zh: 'ESTJ 总经理型', en: 'ESTJ Personality', color: 'accent' },
+    { zh: '高考广东省前1%', en: 'Gaokao Top 1%', color: 'tertiary' },
+    { zh: '外研社杯省一等奖', en: 'FLTRP Cup Provincial 1st', color: 'rose' },
+    { zh: '拉丁舞金星三级', en: 'Latin Dance Gold Star III', color: 'accent' },
+    { zh: '六年学习委员', en: '6-Year Class Officer', color: 'primary' }
+  ],
+  bio_panels: {
+    family: {
+      zh: { icon: '🏠', title: '家庭情况', content: [
+        '我于2008年出生在广东省东莞市，在一个普通但温暖的家庭中长大。父母经营着一家公司，家庭简单和睦。',
+        '父亲从事工程技术工作，做事严谨有条理；母亲从事财务工作，擅长人际交往。他们虽然工作忙碌，但一直给予我充分的信任和支持，很少对我的学习施加压力，更多是培养我独立处理问题的习惯。',
+        '作为独生女，我和父母关系亲密但彼此留有空间，家庭氛围开明平稳。父母注重培养我的独立性，也尊重我的兴趣选择，这让我从小就养成了自主思考和独立行动的习惯。'
+      ]},
+      en: { icon: '🏠', title: 'Family Background', content: [
+        'I was born in 2008 in Dongguan, Guangdong Province, and grew up in an ordinary but warm family. My parents run a company, and our family life is simple and harmonious.',
+        'My father works in engineering, known for his meticulous and organized approach; my mother works in finance and excels at interpersonal communication. Despite their busy schedules, they have always given me full trust and support, rarely pressuring me academically, instead cultivating my ability to handle problems independently.',
+        'As an only child, I maintain a close yet respectful relationship with my parents. The family atmosphere is open-minded and stable. My parents value my independence and respect my interests, which helped me develop habits of independent thinking and action from an early age.'
+      ]}
+    },
+    life: {
+      zh: { icon: '📖', title: '生平与教育经历', content: [
+        '初中我就读于东莞市的一所外国语学校，这对我后来的英语学习有很大帮助。那时我比较偏好理科，成绩在年级里一直比较靠前。遇到难题时我习惯反复琢磨，享受把复杂问题一步步拆解清晰的过程。语文方面虽然不如理科突出，但也保持了一定兴趣，初中时参加第十九届"梦·阅读"作文大赛，获得初赛亚军和决赛一等奖。',
+        '初中时的我，曾多次登台演讲和主持。正如我那时的班主任所言，"上台，一是为了领奖，二是为了表演。"初一入学时我竞选担任了学习委员，之后连任六年。这个职务让我学会了很多实际的工作方法：如何协调同学意见、如何配合老师推进学习任务、如何在繁杂的事务中分清主次。我组织和参与过不少班级活动：班主任节期间，我和小组成员一起收集班级照片和手写信，制作成一面回顾墙，活动反响不错；每年的班级诗会和生日会，我也和其他班委合作完成策划和执行。',
+        '高中我考入市重点东莞中学。这所学校学风严谨，但氛围轻松，给了我很大的成长空间。高中的理科课程难度明显提升，但我一直保持着对数理化的浓厚兴趣，数学和化学的成绩在年级里也一直名列前茅。',
+        '高一时，我参加第二十届"外研社杯"全国中学生外语素养大赛，获得广东省一等奖。备赛期间我反复打磨演讲稿，最终在赛场上比较沉稳地完成了表达。这次经历让我意识到语言能力与逻辑思维可以相互促进。高中三年，我所在班级的整体成绩在年级里名列前茅，我也因综合表现获得了学校的求佳奖学金（全校前5%）。'
+      ]},
+      en: { icon: '📖', title: 'Life & Education Journey', content: [
+        'I attended a foreign language school in Dongguan for junior high, which greatly benefited my English learning. I preferred science subjects and consistently ranked well in my grade. When facing difficult problems, I habitually pondered them repeatedly, enjoying the process of breaking down complex issues step by step. Although my Chinese was not as strong as science, I maintained interest — I participated in the 19th "Dream · Reading" Essay Contest and won the preliminary runner-up and the final first prize.',
+        'During junior high, I frequently gave speeches and hosted events on stage. As my homeroom teacher said, "Going on stage is either to receive awards or to perform." I was elected as the class study committee member in Grade 7 and served for six consecutive years. This role taught me practical working methods: how to coordinate classmates\' opinions, cooperate with teachers to advance learning tasks, and prioritize amidst complex affairs. I organized and participated in many class activities: during the Head Teacher Appreciation Day, my team and I collected class photos and handwritten letters to create a memory wall; for annual poetry recitals and birthday parties, I collaborated with other class officers on planning and execution.',
+        'For high school, I was admitted to Dongguan Middle School, a city-level key school. The school has a rigorous academic atmosphere but a relaxed environment, giving me ample room for growth. The difficulty of high school science courses increased significantly, but I maintained a strong interest in mathematics, physics, and chemistry, consistently ranking among the top in my grade.',
+        'In Grade 10, I participated in the 20th "FLTRP Cup" National English Proficiency Competition and won the Guangdong Provincial First Prize. During preparation, I repeatedly refined my speech and delivered it composedly on stage. This experience made me realize that language ability and logical thinking can reinforce each other. Throughout high school, my class ranked among the top in the grade, and I received the Qiujia Scholarship (top 5% of the school) for my overall performance.'
+      ]}
+    },
+    personality: {
+      zh: { icon: '💭', title: '性格特征', content: [
+        '我的MBTI类型是ESTJ（总经理型）。朋友们对我的普遍印象是：容易接近，但要真正交心并不容易。我做事比较靠谱，遇到问题习惯先分析再行动，情绪稳定，不容易有波动，能照顾到周围人的感受。',
+        '同时我也意识到自己对自己要求偏严格，不太擅长给自己放松和安慰，有时显得缺乏"温度"。我享受独处，能在安静的环境中恢复精力；但公开场合也不怯场，演讲、主持、辩论这类需要当众表达的场景，我能比较自然地进入状态。',
+        '我有一些长期坚持的爱好：拉丁舞八年舞龄，通过金星三级考试；钢琴五级，日常弹奏能让我放松。此外我喜欢散步、看书、听音乐，偶尔旅行，这些习惯让我在忙碌之外保持内心的平稳。'
+      ]},
+      en: { icon: '💭', title: 'Personality Traits', content: [
+        'My MBTI type is ESTJ (Executive). Friends generally describe me as approachable but not easy to truly get close to. I am reliable in getting things done, preferring to analyze before acting, with stable emotions that rarely fluctuate, while being considerate of others\' feelings.',
+        'I also recognize that I tend to be strict with myself, not very good at relaxing or comforting myself, which can sometimes make me seem less "warm." I enjoy solitude and can recharge in quiet environments; yet I am not shy in public settings — scenarios like speeches, hosting, and debates that require public expression come relatively naturally to me.',
+        'I have some long-pursued hobbies: eight years of Latin dance with Gold Star Level III certification; piano at Grade 5, which helps me relax. I also enjoy walking, reading, listening to music, and occasional travel — these habits help me maintain inner calm amidst a busy life.'
+      ]}
+    },
+    future: {
+      zh: { icon: '🎓', title: '大学期待', content: [
+        '进入华中科技大学后，我希望能继续保持对数理学科的热情，在专业学习上扎实投入。也希望能有机会进入大学生创业协会，发挥自己的组织和表达能力，拓宽视野，尝试新事物，不断突破自己。',
+        '更重要的是，我希望在大学里学会对自己更宽容一些，不只追求目标达成，也能享受过程。最终期待自己在知识、能力、品格各方面均衡发展，成为一个有宽度有深度的"Π"型人才，在更好的平台上成为更好的自己。',
+        '我对未来的一切充满向往，我将保持谦逊，与同学们共勉。'
+      ]},
+      en: { icon: '🎓', title: 'University Aspirations', content: [
+        'After entering Huazhong University of Science and Technology, I hope to maintain my passion for mathematics and science, investing solidly in my major studies. I also hope to join the university entrepreneurship association, leveraging my organizational and expressive abilities, broadening my horizons, trying new things, and continuously pushing beyond my limits.',
+        'More importantly, I hope to learn to be kinder to myself at university — not only pursuing goal achievement but also enjoying the process. Ultimately, I aspire to develop holistically in knowledge, capability, and character, becoming a "Π-shaped" talent with both breadth and depth, becoming a better version of myself on a better platform.',
+        'I am full of anticipation for the future. I will remain humble and strive together with my fellow students.'
+      ]}
+    }
+  },
+  highlights: [
+    { zh: '广东省前1%', en: 'Top 1% in Guangdong', num: '1%', icon: '🏆' },
+    { zh: '六年学习委员', en: '6-Year Class Officer', num: '6年', icon: '📋' },
+    { zh: '外研社杯省一等奖', en: 'FLTRP Cup 1st Prize', num: '省一', icon: '🎤' },
+    { zh: '求佳奖学金', en: 'Qiujia Scholarship', num: '前5%', icon: '🥇' },
+    { zh: '拉丁舞金星三级', en: 'Latin Dance Gold Star III', num: '8年', icon: '💃' }
+  ],
+  education: [
+    { year: '2026 – 2030', title: { zh: '华中科技大学', en: 'Huazhong Univ. of Sci. & Tech.' }, desc: { zh: '材料科学与工程专业（本科）', en: 'Materials Science & Engineering (B.Eng.)' } },
+    { year: '2023 – 2026', title: { zh: '东莞中学', en: 'Dongguan Middle School' }, desc: { zh: '市重点高中，理科成绩名列前茅，班级综合成绩年级领先', en: 'City key high school; top-ranked in science; class ranked among top in grade' } },
+    { year: '2020 – 2023', title: { zh: '东莞市礼仁外国语学校', en: 'Dongguan Liren Foreign Language School' }, desc: { zh: '初中阶段，连任学习委员，参加"梦·阅读"作文大赛获一等奖', en: 'Junior high; served as study committee member; won 1st prize in "Dream · Reading" essay contest' } }
+  ],
+  skills: [
+    { cat: { zh: '语言能力', en: 'Languages' }, items: [{ name: { zh: '中文表达与写作', en: 'Chinese Writing' }, level: 85 }, { name: { zh: '公众演讲', en: 'Public Speaking' }, level: 80 }] },
+    { cat: { zh: '组织与领导力', en: 'Leadership' }, items: [{ name: { zh: '活动策划', en: 'Event Planning' }, level: 85 }, { name: { zh: '团队协作', en: 'Teamwork' }, level: 90 }, { name: { zh: '项目协调', en: 'Project Coordination' }, level: 80 }] },
+    { cat: { zh: '艺术特长', en: 'Arts' }, tags: ['拉丁舞 金星三级', '钢琴 五级', '主持与演讲', '辩论'] },
+    { cat: { zh: '个人品质', en: 'Personal Qualities' }, tags: ['情绪稳定', '分析型思维', '独立自主', '高度负责', '抗压能力强'] }
+  ],
+  certs: [
+    { zh: '外研社杯全国中学生英语素养大赛 省级一等奖', en: 'FLTRP Cup English Contest Provincial 1st Prize', year: '2025', icon: '🏆' },
+    { zh: '求佳奖学金（全校前5%）', en: 'Qiujia Scholarship (Top 5%)', year: '2025', icon: '🥇' },
+    { zh: '第十九届"梦·阅读"作文大赛 决赛一等奖', en: '19th "Dream · Reading" Essay Contest 1st Prize', year: '2022', icon: '✍️' },
+    { zh: '拉丁舞金星三级证书（CCAT认证）', en: 'Latin Dance Gold Star III (CCAT)', year: '', icon: '💃' },
+    { zh: '钢琴五级证书（中央音乐学院认证）', en: 'Piano Grade 5 (Central Conservatory)', year: '', icon: '🎹' },
+    { zh: '高中连续3年"校级优秀学生干部""三好学生"', en: '3-Year Outstanding Student Leader & Merit Student', year: '2023–2026', icon: '🌟' },
+    { zh: '高考总分位列广东省理科前1%', en: 'Gaokao Top 1% in Guangdong (Science)', year: '2026', icon: '🎓' }
+  ],
+  photos: [
+    'photo/emerald-lake.jpg',
+    'photo/07cb48aa654ede17b5fbc9acbb13ccc2.png',
+    'photo/0ebc46d1e49205b9f3694a8579824af6.jpg',
+    'photo/17809bf6683de53c5bcc74e88cdd1063.jpg',
+    'photo/1c6682afd8b39189862b60a84c09acbd.jpg',
+    'photo/6fb934e1e32a28a402195f13015827c7.jpg',
+    'photo/af360df1dc8b0b28cc127a5503a2f7c7.jpg',
+    'photo/ce02618d4849fbc205500753b9a64ab0.jpg',
+    'photo/d6eb0beddb218d33cbcc8be7ce1c1852.jpg',
+    'photo/fc200c9b108fb609e7170f235afa3668.jpg',
+    'photo/27e01bba558fb47e380a5b95f0792e3f.jpg',
+    'photo/3857f018b853483a00eb0860eb5ece4d.jpg'
+  ],
+  i18n: {
+    zh: {
+      nav_home: '首页', nav_highlights: '亮点', nav_education: '教育', nav_skills: '技能', nav_gallery: '相册',
+      hero_intro: '华中科技大学2026级本科生。生于东莞，长于开明之家。热爱数理与表达，享受逻辑推演与舞台表达的双重乐趣。ESTJ型人格，靠谱务实，正在成为"Π"型人才的道路上稳步前行。',
+      contact_me: '📧 联系我',
+      highlights_label: '亮点成果', highlights_title: '成长亮点',
+      education_label: '教育背景', education_title: '求学之路',
+      skills_label: '技能', skills_title: '能力画像',
+      certs_label: '证书与荣誉', certs_title: '获奖与证书',
+      gallery_label: '生活相册', gallery_title: '生活点滴', gallery_btn: '点击查看生活照相册',
+      updated: '更新于',
+      email_copied: '邮箱已复制到剪贴板！',
+      phone_copied: '电话已复制到剪贴板！',
+      wechat_copied: '微信号已复制到剪贴板！',
+      copy_failed: '复制失败，请手动复制'
+    },
+    en: {
+      nav_home: 'Home', nav_highlights: 'Highlights', nav_education: 'Education', nav_skills: 'Skills', nav_gallery: 'Gallery',
+      hero_intro: 'HUST Class of 2026 undergraduate. Born in Dongguan, raised in an open-minded family. Passionate about STEM and self-expression. ESTJ personality — reliable, pragmatic, steadily progressing toward becoming a "Π-shaped" talent.',
+      contact_me: '📧 Contact Me',
+      highlights_label: 'Highlights', highlights_title: 'Growth Highlights',
+      education_label: 'Education', education_title: 'My Journey',
+      skills_label: 'Skills', skills_title: 'Capability Profile',
+      certs_label: 'Certificates', certs_title: 'Awards & Certificates',
+      gallery_label: 'Gallery', gallery_title: 'Life Moments', gallery_btn: 'Click to view my photo album',
+      updated: 'Updated',
+      email_copied: 'Email copied to clipboard!',
+      phone_copied: 'Phone copied to clipboard!',
+      wechat_copied: 'WeChat ID copied to clipboard!',
+      copy_failed: 'Copy failed, please copy manually'
+    }
+  }
+};
+
+let currentLang = 'zh';
+
+function t(key) {
+  return (resume.i18n[currentLang] && resume.i18n[currentLang][key]) || key;
+}
+function l(obj) {
+  if (typeof obj === 'object' && obj !== null) return obj[currentLang] || obj['zh'] || '';
+  return obj;
+}
+
+/* ========== Render ========== */
+function renderHeroBadges() {
+  const container = document.getElementById('heroBadges');
+  if (!container) return;
+  container.innerHTML = resume.hero_badges.map((b, i) =>
+    `<span class="badge badge-${b.color}" style="animation-delay:${i*0.1}s">${l(b)}</span>`
+  ).join('');
+}
+
+function renderBioPanels() {
+  const container = document.getElementById('bioPanelsContainer');
+  if (!container) return;
+  const keys = ['family', 'life', 'personality', 'future'];
+  container.innerHTML = keys.map(k => {
+    const p = resume.bio_panels[k][currentLang];
+    return `<div class="bio-panel" id="bio-${k}">
+      <div class="bio-panel-icon">${p.icon}</div>
+      <h3 class="bio-panel-title">${p.title}</h3>
+      ${p.content.map(c => `<p>${c}</p>`).join('')}
+    </div>`;
+  }).join('');
+}
+
+function renderHighlights() {
+  const container = document.getElementById('highlightsGrid');
+  if (!container) return;
+  container.innerHTML = resume.highlights.map(h =>
+    `<div class="highlight-card animate-in">
+      <div class="highlight-icon">${h.icon}</div>
+      <div class="highlight-num">${h.num}</div>
+      <div class="highlight-label">${l(h)}</div>
+    </div>`
+  ).join('');
+}
+
+function renderEducation() {
+  const container = document.getElementById('timeline');
+  if (!container) return;
+  container.innerHTML = resume.education.map(e =>
+    `<div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">${e.year}</div>
+      <div class="timeline-title">${l(e.title)}</div>
+      <div class="timeline-desc">${l(e.desc)}</div>
+    </div>`
+  ).join('');
+}
+
+function renderSkills() {
+  const container = document.getElementById('skillsGrid');
+  if (!container) return;
+  container.innerHTML = resume.skills.map(s => {
+    if (s.items) {
+      return `<div class="skill-cat">
+        <div class="skill-cat-title">${l(s.cat)}</div>
+        ${s.items.map(it => `<div class="skill-item"><span class="skill-name">${l(it.name)}</span><div class="skill-bar"><div class="skill-fill" style="width:0" data-width="${it.level}%"></div></div></div>`).join('')}
+      </div>`;
+    }
+    if (s.tags) {
+      return `<div class="skill-cat">
+        <div class="skill-cat-title">${l(s.cat)}</div>
+        <div class="skill-tags">${s.tags.map(t => `<span class="skill-tag">${t}</span>`).join('')}</div>
+      </div>`;
+    }
+    return '';
+  }).join('');
+}
+
+function renderCerts() {
+  const container = document.getElementById('certsGrid');
+  if (!container) return;
+  container.innerHTML = resume.certs.map(c =>
+    `<div class="cert-card">
+      <span class="cert-icon">${c.icon}</span>
+      <div>
+        <div class="cert-name">${l(c)}</div>
+        ${c.year ? `<div class="cert-year">${c.year}</div>` : ''}
+      </div>
+    </div>`
+  ).join('');
+}
+
+function renderGallery() {
+  const preview = document.getElementById('galleryPreview');
+  if (!preview || !resume.photos) return;
+  preview.innerHTML = resume.photos.map((p, i) =>
+    `<img src="${p}" alt="生活照 ${i+1}" loading="lazy" data-index="${i}">`
+  ).join('');
+}
+
+let albumIndex = 0;
+function updateAlbumView() {
+  const img = document.getElementById('albumMainImg');
+  const counter = document.getElementById('albumCounter');
+  const thumbs = document.getElementById('albumThumbs');
+  const prevBtn = document.getElementById('albumArrowPrev');
+  const nextBtn = document.getElementById('albumArrowNext');
+  if (!resume.photos || !img) return;
+  img.style.opacity = '0';
+  img.style.transform = 'scale(.95)';
+  setTimeout(() => {
+    img.src = resume.photos[albumIndex];
+    counter.textContent = `${albumIndex + 1} / ${resume.photos.length}`;
+    thumbs.innerHTML = resume.photos.map((p, i) =>
+      `<img class="album-thumb ${i === albumIndex ? 'active' : ''}" src="${p}" alt="生活照 ${i+1}" data-index="${i}" loading="lazy">`
+    ).join('');
+    prevBtn.disabled = albumIndex === 0;
+    nextBtn.disabled = albumIndex === resume.photos.length - 1;
+    // 滚动到当前缩略图
+    const activeThumb = thumbs.querySelector('.album-thumb.active');
+    if (activeThumb) activeThumb.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+    img.onload = () => {
+      img.style.opacity = '1';
+      img.style.transform = 'scale(1)';
+      img.onload = null;
+    };
+    if (img.complete) {
+      img.style.opacity = '1';
+      img.style.transform = 'scale(1)';
+    }
+  }, 200);
+}
+function openAlbum(startIdx) {
+  const overlay = document.getElementById('albumOverlay');
+  if (!overlay || !resume.photos) return;
+  overlay.classList.add('open');
+  overlay.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  albumIndex = startIdx !== undefined ? startIdx : 0;
+  updateAlbumView();
+}
+function closeAlbum() {
+  const overlay = document.getElementById('albumOverlay');
+  overlay.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+function albumStep(step) {
+  if (!resume.photos) return;
+  const newIndex = albumIndex + step;
+  if (newIndex < 0 || newIndex >= resume.photos.length) return;
+  albumIndex = newIndex;
+  updateAlbumView();
+}
+function initAlbum() {
+  const openBtn = document.getElementById('galleryOpenBtn');
+  const preview = document.getElementById('galleryPreview');
+  const overlay = document.getElementById('albumOverlay');
+  const close = document.getElementById('albumClose');
+  const prevBtn = document.getElementById('albumArrowPrev');
+  const nextBtn = document.getElementById('albumArrowNext');
+  const thumbs = document.getElementById('albumThumbs');
+  if (openBtn) openBtn.addEventListener('click', () => openAlbum(0));
+  if (preview) {
+    preview.addEventListener('click', e => {
+      const idx = e.target.dataset?.index;
+      if (idx !== undefined) openAlbum(Number(idx));
+    });
+  }
+  if (close) close.addEventListener('click', closeAlbum);
+  if (prevBtn) prevBtn.addEventListener('click', () => albumStep(-1));
+  if (nextBtn) nextBtn.addEventListener('click', () => albumStep(1));
+  if (thumbs) {
+    thumbs.addEventListener('click', e => {
+      if (e.target.classList.contains('album-thumb')) {
+        albumIndex = Number(e.target.dataset.index);
+        updateAlbumView();
+      }
+    });
+  }
+  // 触摸滑动支持
+  const stage = document.querySelector('.album-stage');
+  if (stage) {
+    let touchStartX = 0;
+    stage.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
+    stage.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 50) albumStep(diff > 0 ? 1 : -1);
+    }, {passive: true});
+  }
+  document.addEventListener('keydown', e => {
+    if (!overlay?.classList.contains('open')) return;
+    if (e.key === 'Escape') closeAlbum();
+    if (e.key === 'ArrowLeft') albumStep(-1);
+    if (e.key === 'ArrowRight') albumStep(1);
+  });
+}
+
+function renderAll() {
+  renderHeroBadges();
+  renderBioPanels();
+  renderHighlights();
+  renderEducation();
+  renderSkills();
+  renderCerts();
+  renderGallery();
+  // Animate skill bars
+  setTimeout(() => {
+    document.querySelectorAll('.skill-fill').forEach(el => {
+      el.style.width = el.dataset.width || '0%';
+    });
+  }, 200);
+}
+
+/* ========== Navbar ========== */
+function initNavbar() {
+  const navbar = document.getElementById('navbar');
+  const links = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 10);
+    // Active link
+    let current = '';
+    document.querySelectorAll('section[id]').forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  });
+}
+
+/* ========== Scroll Top ========== */
+function initScrollTop() {
+  const btn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 500));
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+/* ========== Theme ========== */
+function applyTheme() {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (saved === 'dark' || (!saved && prefersDark)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+}
+function toggleTheme() {
+  const isDark = document.documentElement.hasAttribute('data-theme');
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+/* ========== Language ========== */
+function toggleLang() {
+  currentLang = currentLang === 'zh' ? 'en' : 'zh';
+  // Update i18n elements
+  document.querySelectorAll('[data-i18n-key]').forEach(el => {
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.placeholder = t(el.dataset.i18nKey);
+    } else {
+      el.textContent = t(el.dataset.i18nKey);
+    }
+  });
+  renderAll();
+}
+
+/* ========== Email ========== */
+function initEmail() {
+  const btn = document.getElementById('btnEmail');
+  const fullEmail = resume.email_user + '@' + resume.email_domain;
+  btn.addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.href = 'mailto:' + fullEmail;
+    link.click();
+  });
+  btn.addEventListener('contextmenu', e => { e.preventDefault(); copyToClipboard(fullEmail, 'email_copied'); });
+}
+
+/* ========== Copy ========== */
+function copyToClipboard(text, key) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => showToast(t(key)));
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); showToast(t(key)); } catch (e) { showToast(t('copy_failed')); }
+    document.body.removeChild(ta);
+  }
+}
+
+function initCopyButtons() {
+  [{ id: 'btnPhone', key: 'phone_copied' }, { id: 'btnWechat', key: 'wechat_copied' }].forEach(({ id, key }) => {
+    const btn = document.getElementById(id);
+    if (!btn) return;
+    btn.addEventListener('click', () => copyToClipboard(btn.dataset.copy, key));
+  });
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg; toast.classList.add('show');
+  clearTimeout(toast._timeout);
+  toast._timeout = setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+/* ========== Lightbox ========== */
+function initLightbox() {
+  const avatar = document.querySelector('.hero-avatar');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('lightboxClose');
+  if (!avatar) return;
+  avatar.addEventListener('click', () => {
+    lightboxImg.src = avatar.src;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+  function close() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.classList.contains('open')) close(); });
+}
+
+/* ========== Bio Cards (替代 Ring Buttons) ========== */
+function initBioCards() {
+  const cards = document.querySelectorAll('.bio-card');
+  const modal = document.getElementById('bioModal');
+  const modalClose = document.getElementById('bioModalClose');
+  const modalIcon = document.getElementById('bioModalIcon');
+  const modalTitle = document.getElementById('bioModalTitle');
+  const modalSub = document.getElementById('bioModalSub');
+  const modalBody = document.getElementById('bioModalBody');
+
+  const panelMap = {
+    family: { sub: { zh: '出生于东莞，开明温暖的家庭', en: 'Born in Dongguan, open and warm family' } },
+    life: { sub: { zh: '六年学习委员，省一等奖，求佳奖学金', en: '6-year class officer, provincial 1st prize, Qiujia Scholarship' } },
+    personality: { sub: { zh: 'ESTJ型，拉丁舞八年，钢琴五级', en: 'ESTJ, 8-year Latin dancer, piano Grade 5' } },
+    future: { sub: { zh: '数理热情，创业协会，Π型人才', en: 'STEM passion, entrepreneurship club, T-shaped talent' } }
+  };
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const key = card.dataset.panel;
+      if (!resume.bio_panels[key]) return;
+      const data = resume.bio_panels[key][currentLang];
+      const subText = panelMap[key]?.sub?.[currentLang] || '';
+
+      const contentArr = [...data.content];
+      const titleText = data.title;
+      const iconText = data.icon;
+
+      modalIcon.textContent = iconText;
+      modalTitle.textContent = titleText;
+      modalSub.textContent = subText;
+      modalBody.innerHTML = contentArr.map(c => `<p>${c}</p>`).join('');
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  if (modalClose) modalClose.addEventListener('click', closeBioModal);
+  if (modal) {
+    modal.addEventListener('click', e => { if (e.target === modal) closeBioModal(); });
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal?.classList.contains('open')) closeBioModal();
+  });
+
+  function closeBioModal() {
+    if (!modal) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+}
+
+/* ========== Footer ========== */
+function initFooter() {
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+}
+
+/* ========== Init ========== */
+document.addEventListener('DOMContentLoaded', () => {
+  applyTheme();
+  renderAll();
+  initNavbar();
+  initScrollTop();
+  initEmail();
+  initCopyButtons();
+  initLightbox();
+  initBioCards();
+  initAlbum();
+  initFooter();
+  document.getElementById('btnTheme').addEventListener('click', toggleTheme);
+  document.getElementById('btnLang').addEventListener('click', toggleLang);
+});
+</script>
+</body>
+</html>
